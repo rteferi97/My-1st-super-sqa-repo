@@ -64,12 +64,12 @@ has_expensive_items = False
 
 for category in food_menu:
     for items in category['items']:
-        if items["price"] > 10:
+        if items["price"] > 20:
             has_expensive_items = True
             break
 print(f" are there items above $20 ? {has_expensive_items}")
 
-# Exercise 5: Print the names of the vegetarian items (category: Main Course, item: Vegetable Stir-Fry)
+# GET CLARITY Exercise 5: Print the names of the vegetarian items (category: Main Course, item: Vegetable Stir-Fry)
 print("+++++++++++++++++++EXERCISE 5+++++++++++++++++++")
 
 carnivorous_foods = ['salmon',"Salmon","Chicken", 'chicken', "Steak", 'steak']
@@ -100,14 +100,16 @@ average_price = total_dessert_price/dessert_items_count
 
 print(f"Average price of dessert: {round(average_price, 2)}")
 
-# Exercise 7: Update the price of the Grilled Salmon item to $18.99
+# GET CLARITY Exercise 7: Update the price of the Grilled Salmon item to $18.99
 print("+++++++++++++++++++EXERCISE 7+++++++++++++++++++")
 
 for category in food_menu:
     for items in category['items']:
         if items['name'] == "Grilled Salmon":
-            items['price'] == 18.99
-
+            new_price = str(items['price'])
+            final_price = new_price.replace("16.99","18.99")
+            print(final_price)
+            print(food_menu)
 
 
 # Exercise 8: Print the names of the items with prices greater than $15
@@ -119,7 +121,8 @@ items_above_15 = []
 for category in food_menu:
     for items in category['items']:
         if items["price"] > 15:
-            items_above_15.append(items['name']) #OR
+            items_above_15.append(items['name'])
+            #OR
             print(items['name'])
 print(" ")
 print("or in a different format... ")
