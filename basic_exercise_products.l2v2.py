@@ -180,4 +180,4 @@ products = [
 #
 # avg_smartphone_price = round((total_screen_size/in_stock_smartphones),2)
 # print(avg_smartphone_price)
-# 
+#
